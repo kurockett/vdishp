@@ -1,0 +1,70 @@
+.content {
+  &__head-title {
+    @include setFonts(Avenir, normal, bold, 60px, 60px);
+    color: $title;
+    margin-bottom: 150px;
+    text-align: center;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: left;
+
+    &:nth-child(2n) {
+      text-align: right;
+    }
+  }
+
+  &__item {
+    margin-bottom: 70px;
+    min-height: 200px;
+    //@include setFlex(space-between, flex-start);
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__description {
+    max-width: 450px;
+    text-align: left;
+  }
+
+  &__info {
+    @include setFlex(flex-start, flex-start, column);
+    padding: 20px;
+  }
+
+  &__picture {
+    max-width: 45%;
+    border-radius: $borderRadius;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__list {
+    column-count: 2;
+    padding-left: 15px;
+    &_item {
+      @include setFonts(Paytone One, normal, bold, 18px, 18px);
+      margin-bottom: 10px;
+      position: relative;
+      &:before {
+        clear: both;
+        content: "";
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 7px;
+        left: -12px;
+        border-radius: 100%;
+        background-color: red;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.create {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/create-logo.webp");
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    @include setFlex(center, center, column);
+    align-content: space-between;
+  }
+
+  &__title, &__subtitle {
+    color: $white;
+  }
+
+  &__title {
+    @include setFonts(Paytone One, normal, normal, 34px, 34px);
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    @include setFonts(Avenir, normal, normal, 22px, 25px);
+  }
+}

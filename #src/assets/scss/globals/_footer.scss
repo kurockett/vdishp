@@ -1,0 +1,39 @@
+.footer {
+  background-color: $footer;
+
+  &__content {
+    padding: 20px 0;
+  }
+
+  //&__mem{
+  //  position: absolute;
+  //  top: 0;
+  //  left: 20px;
+  //}
+
+  &__title {
+    @include setFonts(Avenir, normal, bold, 24px, 24px);
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    @include setFlex(space-between, flex-end);
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    @include setFonts(Paytone One, normal, normal, 14px, 16px);
+    color: $white;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+
+  &__copyright {
+    @include setFonts(Scotch Modern, normal, bold, 16px, 18px);
+    color: $white;
+  }
+}

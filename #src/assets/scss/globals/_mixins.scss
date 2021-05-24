@@ -1,0 +1,14 @@
+@mixin setFlex($jc, $ai, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+}
+
+@mixin setFonts($ff,$f-style,$fw,$f-size,$lh) {
+  font-family: $ff, sans-serif;
+  font-style: $f-style;
+  font-weight: $fw;
+  font-size: $f-size;
+  line-height: $lh;
+}

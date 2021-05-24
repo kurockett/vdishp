@@ -1,0 +1,49 @@
+.content {
+  &__head-title {
+    @include setFonts(Avenir, normal, bold, 60px, 60px);
+    color: $title;
+    margin-bottom: 150px;
+    text-align: center;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: left;
+
+    &:nth-child(2n) {
+      text-align: right;
+    }
+  }
+
+  &__item {
+    margin-bottom: 50px;
+    min-height: 200px;
+    @include setFlex(space-between, flex-start);
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__description {
+    max-width: 450px;
+    text-align: left;
+  }
+
+  &__info {
+    @include setFlex(flex-start, flex-start, column);
+    padding: 20px;
+  }
+
+  &__picture {
+    max-width: 45%;
+    border-radius: $borderRadius;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

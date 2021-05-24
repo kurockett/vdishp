@@ -1,0 +1,26 @@
+.main {
+  margin: 60px 0;
+}
+
+@import "intro";
+@import "create";
+@import "content";
+
+.intro, .create {
+  margin-bottom: 60px;
+
+}
+
+.intro, .content {
+  &__title {
+    @include setFonts(Avenir, normal, bold, 40px, 40px);
+    color: $title;
+    margin-bottom: 30px;
+  }
+  &__subtitle{
+    @include setFonts(Avenir, normal, normal, 16px, 26px);
+    color: $title;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+}
